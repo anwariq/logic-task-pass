@@ -1,49 +1,39 @@
-#include <iostream.h>
+#include <iostream>
 
-// Function for print prime
-// number in given range
-void primeInRange(int L, int R)
+void prime(int x, int y)
 {
-	int i, j, flag;
+	int i, j, p;
 
-	// Traverse each number in the
-	// interval with the help of for loop
-	for (i = L; i <= R; i++) {
+	for (i = x; i <= y; i++) {
 
 		if (i == 1 || i == 0)
 			continue;
 
-		// flag variable to tell
-		// if i is prime or not
-		flag = 1;
+		p = 1;
 
-		// Iterate to check if i is prime
-		// or not
 		for (j = 2; j <= i / 2; ++j) {
 			if (i % j == 0) {
-				flag = 0;
+				p = 0;
 				break;
 			}
 		}
-
-		// flag = 1 means i is prime
-		// and flag = 0 means i is not prime
-		if (flag == 1)
-			printf("%d ", i);
+		
+		if (p == 1)
+		std::cout  <<   i << "  " ;
 	}
 }
 
-// Driver Code
 int main()
 {
-	// Given Range
-	int L = 1;
-	int R = 10;
+	int x ;
+	int y ;
+	std::cout  <<"This function will find the prime numbers between two numbers \n\n ";
+	std::cout  <<"Enter the first number (the lowest) :";
+std::cin >> x;
+std::cout << "Enter the last number (the highest) :" ;
+std::cin >> y;
 
-	// Function Call
-	primeInRange(L, R);
+	prime(x, y);
 
 	return 0;
 }
-
-
