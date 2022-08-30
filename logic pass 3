@@ -1,0 +1,28 @@
+#include <iostream>
+ 
+int count(std::string str, char y )
+{
+    int counter = 0;
+    for (int i = 0; i < str.size(); i++)
+      {  if (str[i] == y)
+            counter++;
+}
+
+	return counter;
+}
+    
+int main()
+{
+    std::string str ;
+	char y ;
+	
+	std::cout  <<"This function will count how many the given character repeated in any word \n\n ";
+	std::cout  <<" Enter your word :";
+std::cin >> str ;
+std::cout << "Enter the character you want to find :" ;
+std::cin >> y;
+
+		  std::cout << "Character " << y << " occurs " << count( str,  y ) << " times.";
+
+	return 0;
+}
