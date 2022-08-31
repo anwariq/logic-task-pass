@@ -1,0 +1,31 @@
+#include <algorithm>
+#include <iostream>
+
+std::string removechar(std::string str, char c)
+{
+	str.erase(remove(
+				str.begin(), str.end(), c),
+			str.end());
+
+	return str;
+}
+
+int main()
+{
+    std::string str ;
+	char c ;
+
+	std::cout  <<"This function will remove any given character from a String \n\n ";
+	std::cout  <<" Enter your String :";
+std::cin >> str ;
+
+std::cout << "\nEnter the character you want to remove :" ;
+std::cin >> c;
+
+std::cout << "\nString Before: " << str << std::endl;
+
+	str = removechar(str, c);
+
+std::cout << "String After: " << str << std::endl;
+	return 0;
+}
